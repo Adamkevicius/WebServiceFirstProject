@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-doctor-doctor-type-table" author="m.adamkevicius" runOnChange="true">
+        <createTable tableName="doctor_doctor_type">
+            <column name="doctor_id" type="bigint">
+                <constraints foreignKeyName="fk_doctor" referencedTableName="doctor"
+                             referencedColumnNames="id" nullable="false"/>
+            </column>
+
+            <column name="doctor_type_id" type="bigint">
+                <constraints foreignKeyName="fk_doctor_type" referencedTableName="doctor_type"
+                             referencedColumnNames="id" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
