@@ -1,8 +1,11 @@
 package lt.viko.eif.madamkevicius.webservices.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 import lt.viko.eif.madamkevicius.webservices.model.Appointments;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +26,24 @@ public class TransformationService {
         }
     }
 
+    public void transformToPOJO(String fileName) {
+        String json = null;
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Appointments.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
+            File file = new File(fileName);
 
+            Appointments appointments = (Appointments) unmarshaller.unmarshal(file);
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(appointments);
+        } catch (JAXBException e) {
+            throw new RuntimeException(e);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(json);
+    }
 }

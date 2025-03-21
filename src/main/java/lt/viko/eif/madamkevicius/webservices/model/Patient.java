@@ -1,11 +1,12 @@
 package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 
 @Entity
 @Table(name = "patient")
-//@XmlType(propOrder =  {"id", "uid"})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Patient {
 
     @Id

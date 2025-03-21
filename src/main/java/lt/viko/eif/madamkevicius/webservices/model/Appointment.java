@@ -2,11 +2,13 @@ package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "appointment")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,6 +47,30 @@ public class Appointment {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public ApointmentType getApointmentType() {
+        return apointmentType;
+    }
+
+    public void setApointmentType(ApointmentType apointmentType) {
+        this.apointmentType = apointmentType;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     @Override
