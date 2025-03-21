@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class FileController {
+
     public String getFileName() {
         String fileName;
         Scanner reader  = new Scanner(System.in);
