@@ -1,16 +1,13 @@
 package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlTransient;
-import org.springframework.format.annotation.DateTimeFormat;
+import jakarta.xml.bind.annotation.*;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "appointment")
 public class Appointment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,16 +16,17 @@ public class Appointment {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "appointment_type_id", referencedColumnName = "id")
+    @XmlElement
     private ApointmentType apointmentType;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "doctor_id", referencedColumnName = "id")
+    @XmlElement
     private Doctor doctor;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
+    @XmlElement
     private Patient patient;
-
 
     public Appointment() {
     }
@@ -47,18 +45,6 @@ public class Appointment {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public void setApointmentType(ApointmentType apointmentType) {
-        this.apointmentType = apointmentType;
-    }
-
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
     }
 
     @Override

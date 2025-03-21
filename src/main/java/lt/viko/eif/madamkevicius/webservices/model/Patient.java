@@ -1,9 +1,11 @@
 package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlType;
 
 @Entity
 @Table(name = "patient")
+//@XmlType(propOrder =  {"id", "uid"})
 public class Patient {
 
     @Id

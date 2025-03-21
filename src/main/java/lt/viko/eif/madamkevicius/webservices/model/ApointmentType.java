@@ -1,6 +1,7 @@
 package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "appointment_type")

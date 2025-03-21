@@ -4,10 +4,10 @@ import lt.viko.eif.madamkevicius.webservices.FileNameGetter;
 import lt.viko.eif.madamkevicius.webservices.model.Appointment;
 import lt.viko.eif.madamkevicius.webservices.model.Appointments;
 import lt.viko.eif.madamkevicius.webservices.repo.AppointmentRepo;
-import lt.viko.eif.madamkevicius.webservices.service.Transformable;
 import lt.viko.eif.madamkevicius.webservices.service.TransformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 
 import java.util.Scanner;
 

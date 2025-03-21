@@ -2,6 +2,7 @@ package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
 
+
 import java.util.List;
 
 @Entity
