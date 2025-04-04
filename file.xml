@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appointments>
+    <appointment>
+        <id>1</id>
+        <date>2025-11-11T13:00:00+02:00</date>
+        <apointmentType>
+            <id>1</id>
+            <apointmentType>Medical advice</apointmentType>
+            <isPaid>false</isPaid>
+        </apointmentType>
+        <doctor>
+            <id>1</id>
+            <uid>s054323</uid>
+            <password>1234567a</password>
+            <email>robert.anderson@gmail.com</email>
+            <firstName>Robert</firstName>
+            <lastName>Anderson</lastName>
+            <age>35</age>
+            <phoneNumber>+37067586545</phoneNumber>
+            <doctorTypes>
+                <id>1</id>
+                <type>Neurologist</type>
+            </doctorTypes>
+            <doctorTypes>
+                <id>2</id>
+                <type>Family medicine</type>
+            </doctorTypes>
+        </doctor>
+        <patient>
+            <id>1</id>
+            <uid>s053754</uid>
+            <password>1234567a</password>
+            <firstName>Matvej</firstName>
+            <lastName>Adamkevicius</lastName>
+            <email>matvej.adamkevicius@gmail.com</email>
+            <age>21</age>
+            <gender>male</gender>
+            <phone_number>+37068562054</phone_number>
+        </patient>
+    </appointment>
+    <appointment>
+        <id>2</id>
+        <date>2025-10-12T13:00:00+03:00</date>
+        <apointmentType>
+            <id>1</id>
+            <apointmentType>Medical advice</apointmentType>
+            <isPaid>false</isPaid>
+        </apointmentType>
+        <doctor>
+            <id>1</id>
+            <uid>s054323</uid>
+            <password>1234567a</password>
+            <email>robert.anderson@gmail.com</email>
+            <firstName>Robert</firstName>
+            <lastName>Anderson</lastName>
+            <age>35</age>
+            <phoneNumber>+37067586545</phoneNumber>
+            <doctorTypes>
+                <id>1</id>
+                <type>Neurologist</type>
+            </doctorTypes>
+            <doctorTypes>
+                <id>2</id>
+                <type>Family medicine</type>
+            </doctorTypes>
+        </doctor>
+        <patient>
+            <id>2</id>
+            <uid>s054363</uid>
+            <password>123456</password>
+            <firstName>Tomas</firstName>
+            <lastName>Jankauskas</lastName>
+            <email>tomas.jankauskas@gmail.com</email>
+            <age>30</age>
+            <gender>male</gender>
+            <phone_number>+37068564523</phone_number>
+        </patient>
+    </appointment>
+</appointments>
