@@ -1,5 +1,6 @@
 package lt.viko.eif.madamkevicius.webservices.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -74,6 +75,18 @@ public class Doctor {
         this.firstName = firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setLastLame(String lastLame) {
+        this.lastName = lastLame;
+    }
+
     public int getAge() {
         return age;
     }
@@ -88,14 +101,6 @@ public class Doctor {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getLastLame() {
-        return lastName;
-    }
-
-    public void setLastLame(String lastLame) {
-        this.lastName = lastLame;
     }
 
     public List<DoctorType> getDoctorTypes() {

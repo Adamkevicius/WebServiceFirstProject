@@ -27,5 +27,4 @@
                 referencedColumnNames="id"/>
             </column>
         </createTable>
-    </changeSet>
-</databaseChangeLog>
+    </changeSet></databaseChangeLog>

@@ -27,7 +27,7 @@ public class TransformationService {
     }
 
     public void transformToPOJO(String fileName) {
-        String json = null;
+        String json;
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Appointments.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();

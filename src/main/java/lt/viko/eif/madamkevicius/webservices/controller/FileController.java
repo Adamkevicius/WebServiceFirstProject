@@ -1,8 +1,11 @@
 package lt.viko.eif.madamkevicius.webservices.controller;
 
+import org.springframework.stereotype.Service;
+
 import java.io.*;
 import java.util.Scanner;
 
+@Service
 public class FileController {
 
     public String getFileName() {

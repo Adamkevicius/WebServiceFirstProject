@@ -2,7 +2,6 @@ package lt.viko.eif.madamkevicius.webservices.model;
 
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -25,6 +24,7 @@ public class Appointment {
     @JoinColumn(name = "doctor_id", referencedColumnName = "id")
     @XmlElement
     private Doctor doctor;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "patient_id", referencedColumnName = "id")
     @XmlElement
