@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/appointments/getAppointmentPdf"
+           targetNamespace="http://spring.io/appointments/getAppointmentPdf" elementFormDefault="qualified">
+    <xs:element name="getPdfRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="uid" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPdfResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="appointmentsPdf" type="xs:base64Binary"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

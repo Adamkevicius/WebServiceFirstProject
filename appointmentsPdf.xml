@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appointments>
+    <appointment>
+        <id>9</id>
+        <date>2025-07-01T09:00:00+03:00</date>
+        <apointmentType>
+            <id>1</id>
+            <apointmentType>Medical advice</apointmentType>
+            <isPaid>false</isPaid>
+        </apointmentType>
+        <doctor>
+            <id>4</id>
+            <uid>s55784</uid>
+            <password>Q_n2PeuTlMkE7Ws</password>
+            <email>Jackie.Marks95@gmail.com</email>
+            <firstName>Stewart</firstName>
+            <lastName>Gleichner</lastName>
+            <age>33</age>
+            <phoneNumber>+37065777832</phoneNumber>
+            <doctorTypes>
+                <id>2</id>
+                <type>Family medicine</type>
+            </doctorTypes>
+        </doctor>
+        <patient>
+            <id>1</id>
+            <uid>s053754</uid>
+            <password>1234567a</password>
+            <firstName>Matvej</firstName>
+            <lastName>Adamkevicius</lastName>
+            <email>matvej.adamkevicius@gmail.com</email>
+            <age>21</age>
+            <gender>male</gender>
+            <phone_number>+37068562054</phone_number>
+        </patient>
+    </appointment>
+    <appointment>
+        <id>10</id>
+        <date>2025-04-26T00:00:00+03:00</date>
+        <apointmentType>
+            <id>3</id>
+            <apointmentType>Cardiologist consultation</apointmentType>
+            <isPaid>true</isPaid>
+        </apointmentType>
+        <doctor>
+            <id>4</id>
+            <uid>s55784</uid>
+            <password>Q_n2PeuTlMkE7Ws</password>
+            <email>Jackie.Marks95@gmail.com</email>
+            <firstName>Stewart</firstName>
+            <lastName>Gleichner</lastName>
+            <age>33</age>
+            <phoneNumber>+37065777832</phoneNumber>
+            <doctorTypes>
+                <id>2</id>
+                <type>Family medicine</type>
+            </doctorTypes>
+        </doctor>
+        <patient>
+            <id>1</id>
+            <uid>s053754</uid>
+            <password>1234567a</password>
+            <firstName>Matvej</firstName>
+            <lastName>Adamkevicius</lastName>
+            <email>matvej.adamkevicius@gmail.com</email>
+            <age>21</age>
+            <gender>male</gender>
+            <phone_number>+37068562054</phone_number>
+        </patient>
+    </appointment>
+</appointments>

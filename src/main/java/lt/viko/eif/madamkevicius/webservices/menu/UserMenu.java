@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 
 import java.io.File;
+import java.util.List;
 import java.util.Scanner;
 
 @Component
@@ -99,6 +100,12 @@ public class UserMenu {
                     System.out.println("\nGoodbye User!");
                     System.exit(0);
                     break;
+                case "6":
+                    List<Appointment> appointmentList = appointmentRepo.findAppointmentsByPatient_UidAndPatient_Password(
+                            "s053754", "1234567a");
+                    for(Appointment appointment : appointmentList) {
+                        System.out.println(appointment);
+                    }
                 default:
                     System.out.println("Invalid choice");
                     break;

@@ -28,20 +28,19 @@ public class WebServiceConfig {
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-    @Bean(name = "appointment")
-    public DefaultWsdl11Definition appointmentDefinition(
-            @Qualifier("appointmentsSchema") XsdSchema appointmentSchema) {
+    @Bean(name = "appointmentsPdf")
+    public DefaultWsdl11Definition appointmentDefinition(XsdSchema appointmentSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("AppointmentsPort");
+        wsdl11Definition.setPortTypeName("AppointmentsPdfPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://spring.io/appointments/getAppointment");
+        wsdl11Definition.setTargetNamespace("http://spring.io/appointments/getAppointmentPdf");
         wsdl11Definition.setSchema(appointmentSchema);
         return wsdl11Definition;
     }
 
     @Bean
     public XsdSchema appointmentsSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("appointments.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("appointmentsPdf.xsd"));
     }
 
 
