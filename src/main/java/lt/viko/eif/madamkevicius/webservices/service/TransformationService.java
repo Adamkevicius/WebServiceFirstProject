@@ -29,8 +29,8 @@ public class TransformationService {
             jaxbContext = JAXBContext.newInstance(Appointments.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshaller.marshal(appointments, System.out.printf("Objects transformed successfully and saved to file with name: %s\n", fileName));
             marshaller.marshal(appointments, new File(fileName));
+            System.out.printf("Objects transformed successfully and saved to file with name: %s\n", fileName);
         } catch (JAXBException e) {
             System.out.println(e.getLocalizedMessage());
         }

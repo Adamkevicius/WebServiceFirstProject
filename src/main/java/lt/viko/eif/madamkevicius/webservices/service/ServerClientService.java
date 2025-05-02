@@ -11,11 +11,7 @@ import java.net.Socket;
 @Service
 public class ServerClientService {
 
-    private DataOutputStream dos;
-
-    private DataInputStream dis;
-
-    private FileController fileController;
+    private final FileController fileController;
 
     @Autowired
     public ServerClientService(FileController fileController) {
@@ -24,8 +20,8 @@ public class ServerClientService {
 
     public void connectToServer(String hostName, int port, String filePath) {
         try(Socket socket = new Socket(hostName, port)) {
-            dis = new DataInputStream(socket.getInputStream());
-            dos = new DataOutputStream(socket.getOutputStream());
+            DataInputStream dis = new DataInputStream(socket.getInputStream());
+            DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
             System.out.println("Connected to " + hostName + " on port " + port);
             System.out.println("Sending file to server...");
 
@@ -36,7 +32,7 @@ public class ServerClientService {
             dis.close();
             dos.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

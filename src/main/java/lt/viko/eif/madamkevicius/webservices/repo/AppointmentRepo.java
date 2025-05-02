@@ -12,5 +12,4 @@ public interface AppointmentRepo extends JpaRepository<Appointment, Integer> {
 
     List<Appointment> findAppointmentsByPatient_UidAndPatient_Password(String uid, String password);
 
-    boolean existsAppointmentByPatient_UidAndPatient_Password(String uid, String password);
 }
